@@ -1,0 +1,3 @@
+[submodule "ginza_http_api"]
+	path = ginza_http_api
+	url = git@github.com:kaiiy/ginza_http_api.git

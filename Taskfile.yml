@@ -1,0 +1,17 @@
+version: 3
+
+tasks:
+  "ginza:dev":
+    dir: ginza_http_api
+    cmds:
+      - poetry run task run_dev
+  "ginza:run":
+    dir: ginza_http_api
+    cmds:
+      - poetry run task run_prod
+    silent: true
+  "ginza:kill":
+    dir: ginza_http_api 
+    cmds:
+      - poetry run task kill_prod
+    silent: true

@@ -1,0 +1,18 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "ts": "node -r esbuild-register"
+  },
+  "dependencies": {
+    "@line/bot-sdk": "^7.5.2",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.7.0",
+    "got": "^12.5.1"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/node": "^18.8.2",
+    "esbuild": "^0.15.10",
+    "esbuild-register": "^3.3.3"
+  }
+}
