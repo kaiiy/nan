@@ -14,5 +14,6 @@
     "@types/node": "^18.8.2",
     "esbuild": "^0.15.10",
     "esbuild-register": "^3.3.3"
-  }
+  },
+  "packageManager": "yarn@3.2.4"
 }

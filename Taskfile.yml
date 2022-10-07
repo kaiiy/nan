@@ -1,17 +1,24 @@
 version: 3
 
+silent: true
+
+vars:
+  GINZA_DIR: ginza_http_api
+
 tasks:
-  "ginza:dev":
-    dir: ginza_http_api
+  ginza:setup:
+    dir: "{{.GINZA_DIR}}"
+    cmds:
+      - poetry install
+  ginza:dev:
+    dir: "{{.GINZA_DIR}}"
     cmds:
       - poetry run task run_dev
-  "ginza:run":
-    dir: ginza_http_api
+  ginza:run:
+    dir: "{{.GINZA_DIR}}"
     cmds:
       - poetry run task run_prod
-    silent: true
-  "ginza:kill":
-    dir: ginza_http_api 
+  ginza:kill:
+    dir: "{{.GINZA_DIR}}"
     cmds:
       - poetry run task kill_prod
-    silent: true
