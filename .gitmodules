@@ -1,3 +1,8 @@
 [submodule "ginza_http_api"]
 	path = ginza_http_api
 	url = git@github.com:kaiiy/ginza_http_api.git
+	branch = main
+[submodule "pymagnitude_http_api"]
+	path = pymagnitude_http_api
+	url = git@github.com:kaiiy/pymagnitude_http_api.git
+	branch = main
