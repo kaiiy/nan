@@ -10,6 +10,7 @@ tasks:
   submodule:update:
     cmds:
       - git submodule update --remote
+
   line:dev:
     cmds:
       - yarn ts ./src/index.ts
@@ -20,6 +21,7 @@ tasks:
   line:kill:
     cmds:
       - yarn pm2 stop ./dist/index.js
+
   ginza:run:
     dir: "{{.GINZA_DIR}}"
     cmds:
@@ -29,6 +31,7 @@ tasks:
     dir: "{{.GINZA_DIR}}"
     cmds:
       - poetry run task kill_prod
+      
   pymagnitude:run:
     dir: "{{.PYMAGNITUDE_DIR}}"
     cmds:
