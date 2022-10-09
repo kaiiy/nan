@@ -13,7 +13,7 @@ tasks:
 
   line:expose:
     cmds:
-      - yarn ts ./bin/expose.ts
+      - yarn lt --port 45300 --subdomain ${LT_SUBDOMAIN}
   line:dev:
     cmds:
       - yarn ts ./src/index.ts
