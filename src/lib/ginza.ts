@@ -25,7 +25,7 @@ type Parsed = {
     text: string,
     ents: Ent[],
     sents: Sent[],
-    token: Token[]
+    tokens: Token[]
 }
 
-export { Parsed }
+export { Parsed as GinzaParsed }

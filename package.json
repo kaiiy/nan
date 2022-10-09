@@ -12,9 +12,11 @@
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
+    "@types/localtunnel": "^2.0.1",
     "@types/node": "^18.8.2",
     "esbuild": "^0.15.10",
-    "esbuild-register": "^3.3.3"
+    "esbuild-register": "^3.3.3",
+    "localtunnel": "^2.0.2"
   },
   "packageManager": "yarn@3.2.4",
   "volta": {

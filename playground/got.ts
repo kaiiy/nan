@@ -1,5 +1,5 @@
 import got from 'got';
-import { Parsed } from "../src/lib/ginza"
+import { GinzaParsed } from "../src/lib/ginza"
 import 'dotenv/config'
 
 (async () => {
@@ -10,7 +10,7 @@ import 'dotenv/config'
         }
     }).json();
 
-    const parsed = res as Parsed
+    const parsed = res as GinzaParsed
 
     console.log(parsed);
 })()

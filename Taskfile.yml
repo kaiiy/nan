@@ -11,6 +11,9 @@ tasks:
     cmds:
       - git submodule update --remote
 
+  line:expose:
+    cmds:
+      - yarn ts ./bin/expose.ts
   line:dev:
     cmds:
       - yarn ts ./src/index.ts
@@ -22,15 +25,19 @@ tasks:
     cmds:
       - yarn pm2 stop ./dist/index.js
 
+  ginza:dev:
+    dir: "{{.GINZA_DIR}}"
+    cmds:
+      - poetry run uvicorn main:app --reload --port 45100
   ginza:run:
     dir: "{{.GINZA_DIR}}"
     cmds:
       - poetry install
-      - poetry run task run_prod
+      - poetry run gunicorn -c gunicorn.conf.py main:app
   ginza:kill:
     dir: "{{.GINZA_DIR}}"
     cmds:
-      - poetry run task kill_prod
+      - kill `cat prod.pid`
       
   pymagnitude:run:
     dir: "{{.PYMAGNITUDE_DIR}}"
