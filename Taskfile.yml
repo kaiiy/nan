@@ -7,6 +7,9 @@ vars:
   PYMAGNITUDE_DIR: pymagnitude_http_api
 
 tasks:
+  submodule:init:
+    cmds:
+      - git submodule update --init --recursive
   submodule:update:
     cmds:
       - git submodule update --remote
